@@ -1,0 +1,40 @@
+/* Pixelated wave page transition (Osmo Supply) — наши цвета (#eaff00) */
+.transition {
+  z-index: 100;
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  overflow: clip;
+}
+
+.transition__panel {
+  opacity: 0;
+  flex-flow: row;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.transition__col {
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  display: flex;
+}
+
+.transition__pixel {
+  aspect-ratio: 1;
+  background-color: #eaff00;
+  width: 100%;
+}
+
+/* Anti-flash: при заходе по переходу панель мгновенно закрывает экран
+   до того, как JS построит сетку и проиграет reveal. */
+html.px-pre .transition__panel {
+  opacity: 1;
+  background-color: #eaff00;
+}

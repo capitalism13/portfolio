@@ -1,0 +1,81 @@
+/* /design-system — internal showcase (ported from portfolio-site/design-system.html) */
+:root {
+  --ink: #0a0a0a;
+  --paper: #ffffff;
+  --accent: #eaff00;
+  --card: #e5e5e5;
+  --mono: "Roboto Mono", monospace;
+  --cond: "Roboto Condensed", sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+.ds-body { background: var(--paper); color: var(--ink); font-family: var(--mono); -webkit-font-smoothing: antialiased; }
+
+.ds-head { padding: 80px 40px 40px; border-bottom: 1px solid rgba(0,0,0,0.12); }
+.ds-head h1 { font-family: var(--cond); font-weight: 900; font-size: clamp(56px, 11vw, 150px); line-height: 0.9; text-transform: uppercase; letter-spacing: -0.02em; }
+.ds-note { margin-top: 18px; font-size: 14px; color: #777; text-transform: uppercase; letter-spacing: 0.04em; max-width: 640px; line-height: 1.6; }
+.ds-note b { color: var(--ink); }
+
+.ds-sec { padding: 56px 40px; border-bottom: 1px solid rgba(0,0,0,0.1); }
+.ds-sec > h2 {
+  font-family: var(--cond); font-weight: 900; font-size: clamp(28px, 5vw, 56px);
+  text-transform: uppercase; letter-spacing: -0.01em; margin-bottom: 8px;
+}
+.ds-sub { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #999; margin-bottom: 32px; }
+.ds-grid { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+.ds-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.ds-stage { background: var(--card); border-radius: 12px; padding: 28px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.ds-stage--dark { background: var(--ink); }
+.ds-cap { width: 100%; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #999; margin-top: 10px; }
+.ds-stage--dark + .ds-cap, .ds-stage--dark .ds-cap { color: rgba(255,255,255,0.5); }
+
+/* ---- Цвета ---- */
+.sw { width: 150px; }
+.sw .chip { height: 96px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1); }
+.sw .name { margin-top: 10px; font-weight: 600; font-size: 13px; text-transform: uppercase; }
+.sw .hex { font-size: 12px; color: #888; margin-top: 2px; }
+
+/* ---- Типографика ---- */
+.type-cond { font-family: var(--cond); font-weight: 900; text-transform: uppercase; line-height: 0.95; letter-spacing: -0.02em; }
+.t-xl { font-size: 96px; } .t-l { font-size: 60px; } .t-m { font-size: 36px; }
+.type-mono { font-family: var(--mono); }
+.specimen-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #999; margin-bottom: 6px; }
+.specimen + .specimen { margin-top: 28px; }
+
+/* ---- Кнопки ---- */
+.btn {
+  position: relative; overflow: hidden; isolation: isolate;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--mono); font-weight: 600; font-size: 16px; line-height: 1.3;
+  letter-spacing: -0.16px; text-transform: uppercase; text-decoration: none;
+  border: none; border-radius: 8px; padding: 14px 42px; cursor: pointer; white-space: nowrap;
+}
+.btn > span { position: relative; z-index: 2; transition: color 0.4s ease; }
+.btn::before { content:""; position:absolute; inset:0; z-index:1; border-radius:inherit; opacity:0; background-size:220% 100%; transition:opacity .45s ease; pointer-events:none; }
+.btn:hover::before { opacity:1; animation: flow 3.5s ease-in-out infinite; }
+@keyframes flow { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+.btn--nav { background: rgba(0,0,0,0.1); color: #000; }
+.btn--nav::before { background-image: linear-gradient(100deg,#eaff00,#faff8f,#eaff00,#d8f200,#eaff00); }
+.btn--contact { background: var(--accent); color: #000; }
+.btn--contact::before { background-image: linear-gradient(100deg,#000,#2c2c2c,#000,#1a1a1a,#000); }
+.btn--contact:hover > span { color: #fff; }
+.btn--white { background: #fff; color: #000; }
+.btn--white::before { background-image: linear-gradient(100deg,#eaff00,#faff8f,#eaff00,#d8f200,#eaff00); }
+.btn--foot { background: var(--ink); color: #fff; border-radius: 8px; }
+.btn--foot:hover { background: var(--accent); color: #000; }
+
+/* ---- Теги ---- */
+.tag { font-family: var(--mono); font-weight: 600; font-size: 14px; text-transform: uppercase; border-radius: 8px; padding: 8px 14px; }
+.tag--accent { background: var(--accent); color: #000; }
+.tag--glass { color: #fff; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.3); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.tag--stack { border: 1px solid rgba(0,0,0,0.18); color: #111; }
+
+/* ---- Метрика ---- */
+.metric-demo { background: var(--ink); color: #fff; border-radius: 16px; padding: 32px; width: 260px; }
+.metric-demo .n { font-family: var(--cond); font-weight: 900; font-size: 72px; line-height: 1; color: var(--accent); }
+.metric-demo .c { font-size: 13px; color: rgba(255,255,255,0.7); text-transform: uppercase; margin-top: 10px; line-height: 1.4; }
+
+@media (max-width: 640px) {
+  .ds-head, .ds-sec { padding-left: 18px; padding-right: 18px; }
+  .t-xl { font-size: 56px; } .t-l { font-size: 40px; } .t-m { font-size: 28px; }
+}

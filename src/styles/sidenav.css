@@ -1,0 +1,256 @@
+/* Side Navigation with Wipe Effect (Osmo Supply) — наши цвета/шрифты */
+.sidenav__header {
+  z-index: 60;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 2em;
+  left: 2em;
+  right: 2em;
+}
+
+.sidenav__button {
+  z-index: 10;
+  grid-column-gap: .6em;
+  background-color: #eaff00;
+  justify-content: center;
+  align-items: center;
+  gap: .6em;
+  padding: .85em 1.05em;
+  border-radius: .6em;
+  display: flex;
+  border: none;
+  cursor: pointer;
+  transition: background-color .25s ease;
+}
+
+.sidenav__button:hover {
+  background-color: #f2ff66;
+}
+
+/* Иконка-бургер: две полоски, складываются в X при открытии */
+.sidenav__button-icon {
+  position: relative;
+  width: 26px;
+  height: 16px;
+  color: #0a0a0a;
+  display: block;
+}
+
+.sidenav__bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 3px;
+  margin-top: -1.5px;
+  background: currentColor;
+  border-radius: 3px;
+  transition: transform .4s cubic-bezier(.65, .05, 0, 1);
+}
+
+.sidenav__bar:first-child {
+  transform: translateY(-5px);
+}
+
+.sidenav__bar:last-child {
+  transform: translateY(5px);
+}
+
+/* Открыто: две полоски складываются в крестик */
+.sidenav__button.is-open .sidenav__bar:first-child {
+  transform: translateY(0) rotate(45deg);
+}
+
+.sidenav__button.is-open .sidenav__bar:last-child {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.sidenav__button-label {
+  color: #0a0a0a;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.sidenav__nav {
+  z-index: 59;
+  width: 100%;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  position: fixed;
+  inset: 0%;
+}
+
+.sidenav__overlay {
+  z-index: 0;
+  cursor: pointer;
+  background-color: #0a0a0a66;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.sidenav__menu {
+  grid-column-gap: 5em;
+  grid-row-gap: 5em;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 35em;
+  height: 100%;
+  margin-left: auto;
+  padding-top: 6em;
+  padding-bottom: 2em;
+  position: relative;
+  overflow: auto;
+}
+
+.sidenav__menu-bg {
+  z-index: 0;
+  position: absolute;
+  inset: 0%;
+}
+
+.sidenav__menu-bg-panel {
+  z-index: 0;
+  background-color: #0a0a0a;
+  border-top-left-radius: 1.25em;
+  border-bottom-left-radius: 1.25em;
+  position: absolute;
+  inset: 0%;
+}
+
+.sidenav__menu-bg-panel.is--first {
+  background-color: #eaff00;
+}
+
+.sidenav__menu-bg-panel.is--second {
+  background-color: #0a0a0a;
+}
+
+.sidenav__menu-inner {
+  z-index: 1;
+  grid-column-gap: 5em;
+  grid-row-gap: 5em;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  display: flex;
+  position: relative;
+  overflow: auto;
+}
+
+.sidenav__menu-list {
+  flex-flow: column;
+  width: 100%;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+}
+
+.sidenav__menu-list-item {
+  height: 4.25em;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidenav__menu-link {
+  grid-column-gap: .75em;
+  grid-row-gap: .75em;
+  color: #ffffff;
+  width: 100%;
+  padding-top: .75em;
+  padding-bottom: .75em;
+  padding-left: 2em;
+  text-decoration: none;
+  display: flex;
+}
+
+.sidenav__menu-link-heading {
+  z-index: 1;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: clamp(2.2em, 7vw, 3.5em);
+  font-weight: 900;
+  line-height: .9;
+  text-transform: uppercase;
+  transition: transform .55s cubic-bezier(.65, .05, 0, 1), color .35s ease;
+  position: relative;
+  margin: 0px;
+  letter-spacing: -0.02em;
+}
+
+.sidenav__menu-link:hover .sidenav__menu-link-heading {
+  color: #eaff00;
+}
+
+.sidenav__menu-link-eyebrow {
+  z-index: 1;
+  color: #eaff00;
+  text-transform: uppercase;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600;
+  position: relative;
+  margin: 0;
+}
+
+.sidenav__menu-details {
+  grid-column-gap: 1.25em;
+  grid-row-gap: 1.25em;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 2em;
+  display: flex;
+}
+
+.sidenav__menu-socials {
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
+  flex-flow: row;
+  display: flex;
+}
+
+.sidenav__menu .sidenav__button-label {
+  color: rgba(255, 255, 255, 0.85);
+}
+.sidenav__menu a.sidenav__button-label {
+  text-decoration: none;
+  transition: color .25s ease;
+}
+.sidenav__menu a.sidenav__button-label:hover {
+  color: #eaff00;
+}
+
+@media screen and (max-width: 767px) {
+  .sidenav__menu-socials {
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+  }
+
+  .sidenav__menu-bg-panel {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .sidenav__menu {
+    width: 100%;
+  }
+
+  .sidenav__menu-list-item {
+    height: 3.4em;
+  }
+}
