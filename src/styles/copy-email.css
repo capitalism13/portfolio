@@ -12,7 +12,7 @@
   opacity: .5;
   text-align: center;
   margin: 0;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: 0.9em;
@@ -23,7 +23,7 @@
   grid-column-gap: .75em;
   grid-row-gap: .75em;
   background-color: #ffffff;
-  color: #0a0a0a;
+  color: var(--ink);
   border: none;
   border-radius: .5em;
   justify-content: flex-start;
@@ -35,13 +35,13 @@
 
 .copy-email-button:focus {
   outline-offset: 0px;
-  outline: 3px solid #0a0a0a;
+  outline: 3px solid var(--ink);
 }
 
 .copy-email-button:focus-visible {
   outline-offset: 4px;
   border-style: none;
-  outline: 2px solid #eaff00;
+  outline: 2px solid var(--accent);
 }
 
 .copy-email-text__wrap {
@@ -49,7 +49,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   height: 1.2em;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 600;
   font-size: 1.5em;
   line-height: 1.2;
@@ -65,7 +65,7 @@
 
 .copy-email-icon__wrap {
   color: #ffffff;
-  background-color: #0a0a0a;
+  background-color: var(--ink);
   border-radius: .375em;
   justify-content: center;
   align-items: center;
@@ -96,8 +96,8 @@
 
 /* 'Copied' state, when a user has clicked the button */
 [data-copy-button="copied"] .copy-email-icon__wrap {
-  background: #eaff00 !important;
-  color: #0a0a0a !important;
+  background: var(--accent) !important;
+  color: var(--ink) !important;
 }
 [data-copy-button="copied"] .copy-email-text__el {
   transform: translate(0px, -200%) !important;

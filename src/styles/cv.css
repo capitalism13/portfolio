@@ -2,9 +2,9 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 .cv-body {
   min-height: 100vh;
-  background: #0a0a0a;
+  background: var(--ink);
   color: #fff;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -32,14 +32,14 @@
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
-.cv-body .back:hover { background: #eaff00; color: #000; border-color: #eaff00; }
+.cv-body .back:hover { background: var(--accent); color: #000; border-color: var(--accent); }
 .cv-body h1 {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--cond);
   font-weight: 900;
   font-size: clamp(80px, 18vw, 260px);
   line-height: 0.9;
   letter-spacing: -0.02em;
-  color: #eaff00;
+  color: var(--accent);
 }
 .cv-body p {
   font-weight: 500;

@@ -26,11 +26,11 @@ export default function DesignSystemPage() {
         <h2>Цвета</h2>
         <p className="ds-sub">Палитра</p>
         <div className="ds-grid">
-          <div className="sw"><div className="chip" style={{ background: '#0a0a0a' }} /><div className="name">Ink</div><div className="hex">#0A0A0A</div></div>
-          <div className="sw"><div className="chip" style={{ background: '#ffffff' }} /><div className="name">Paper</div><div className="hex">#FFFFFF</div></div>
-          <div className="sw"><div className="chip" style={{ background: '#eaff00' }} /><div className="name">Accent</div><div className="hex">#EAFF00</div></div>
-          <div className="sw"><div className="chip" style={{ background: '#e5e5e5' }} /><div className="name">Card</div><div className="hex">#E5E5E5</div></div>
-          <div className="sw"><div className="chip" style={{ background: '#3ee07a' }} /><div className="name">Status</div><div className="hex">#3EE07A</div></div>
+          <div className="sw"><div className="chip" style={{ background: 'var(--ink)' }} /><div className="name">Ink</div><div className="hex">#0A0A0A</div></div>
+          <div className="sw"><div className="chip" style={{ background: 'var(--paper)' }} /><div className="name">Paper</div><div className="hex">#FFFFFF</div></div>
+          <div className="sw"><div className="chip" style={{ background: 'var(--accent)' }} /><div className="name">Accent</div><div className="hex">#EAFF00</div></div>
+          <div className="sw"><div className="chip" style={{ background: 'var(--card)' }} /><div className="name">Card</div><div className="hex">#E5E5E5</div></div>
+          <div className="sw"><div className="chip" style={{ background: 'var(--status)' }} /><div className="name">Status</div><div className="hex">#3EE07A</div></div>
         </div>
       </section>
 
@@ -109,7 +109,7 @@ export default function DesignSystemPage() {
             <div className="ds-cap">Метрика результата</div>
           </div>
           <div>
-            <div style={{ width: 300, height: 200, borderRadius: 16, background: '#e5e5e5', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ width: 300, height: 200, borderRadius: 'var(--radius-lg)', background: 'var(--card)', position: 'relative', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', left: 18, bottom: 18 }}>
                 <span className="tag tag--accent" style={{ fontSize: 11, padding: '5px 10px' }}>Кейс</span>
                 <div className="type-cond" style={{ fontSize: 36, marginTop: 10 }}>Forte Bank</div>

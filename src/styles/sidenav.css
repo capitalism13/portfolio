@@ -13,7 +13,7 @@
 .sidenav__button {
   z-index: 10;
   grid-column-gap: .6em;
-  background-color: #eaff00;
+  background-color: var(--accent);
   justify-content: center;
   align-items: center;
   gap: .6em;
@@ -34,7 +34,7 @@
   position: relative;
   width: 26px;
   height: 16px;
-  color: #0a0a0a;
+  color: var(--ink);
   display: block;
 }
 
@@ -68,10 +68,10 @@
 }
 
 .sidenav__button-label {
-  color: #0a0a0a;
+  color: var(--ink);
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 600;
   text-transform: uppercase;
   font-size: 1em;
@@ -123,7 +123,7 @@
 
 .sidenav__menu-bg-panel {
   z-index: 0;
-  background-color: #0a0a0a;
+  background-color: var(--ink);
   border-top-left-radius: 1.25em;
   border-bottom-left-radius: 1.25em;
   position: absolute;
@@ -131,11 +131,11 @@
 }
 
 .sidenav__menu-bg-panel.is--first {
-  background-color: #eaff00;
+  background-color: var(--accent);
 }
 
 .sidenav__menu-bg-panel.is--second {
-  background-color: #0a0a0a;
+  background-color: var(--ink);
 }
 
 .sidenav__menu-inner {
@@ -182,7 +182,7 @@
 
 .sidenav__menu-link-heading {
   z-index: 1;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--cond);
   font-size: clamp(2.2em, 7vw, 3.5em);
   font-weight: 900;
   line-height: .9;
@@ -194,14 +194,14 @@
 }
 
 .sidenav__menu-link:hover .sidenav__menu-link-heading {
-  color: #eaff00;
+  color: var(--accent);
 }
 
 .sidenav__menu-link-eyebrow {
   z-index: 1;
-  color: #eaff00;
+  color: var(--accent);
   text-transform: uppercase;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 600;
   position: relative;
   margin: 0;
@@ -232,7 +232,7 @@
   transition: color .25s ease;
 }
 .sidenav__menu a.sidenav__button-label:hover {
-  color: #eaff00;
+  color: var(--accent);
 }
 
 @media screen and (max-width: 767px) {

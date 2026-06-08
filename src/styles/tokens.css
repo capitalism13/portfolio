@@ -1,0 +1,26 @@
+/* Design tokens — single source of truth for the whole site.
+   Imported first in every root layout. The /design-system page renders these. */
+:root {
+  /* ── Brand palette ── */
+  --ink: #0a0a0a; /* near-black text / dark surfaces */
+  --paper: #ffffff; /* light surfaces */
+  --accent: #eaff00; /* signature yellow */
+  --card: #e5e5e5; /* neutral card / stage */
+  --status: #3ee07a; /* availability / "online" green */
+
+  /* Gradient stops for the soft hover "flow" on buttons */
+  --accent-light: #faff8f;
+  --accent-deep: #d8f200;
+  --ink-2: #2c2c2c;
+  --ink-3: #1a1a1a;
+
+  /* ── Type ── */
+  --cond: "Roboto Condensed", sans-serif; /* display / headings, 900 */
+  --mono: "Roboto Mono", monospace; /* body / labels, 400–600 */
+
+  /* ── Radii ── */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 36px;
+}

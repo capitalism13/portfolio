@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react'
 
+import '@/styles/tokens.css'
+
 export default function StandaloneLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ru">

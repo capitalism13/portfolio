@@ -5,11 +5,11 @@ html {
   --fg: #ffffff;
   --dim: rgba(255, 255, 255, 0.6);
   --line: rgba(255, 255, 255, 0.14);
-  background-color: #0a0a0a;
+  background-color: var(--ink);
   transition: background-color 0.5s ease;
 }
 html[data-theme="light"] {
-  --fg: #0a0a0a;
+  --fg: var(--ink);
   --dim: rgba(0, 0, 0, 0.55);
   --line: rgba(0, 0, 0, 0.12);
   background-color: #ffffff;
@@ -85,14 +85,14 @@ body {
   position: absolute;
   top: 2.41719vh; /* 27px */
   right: 6.62489vh; /* 74px */
-  background: #eaff00;
+  background: var(--accent);
   color: #000000;
 }
 
 /* Общий текст-стиль кнопок */
 .nav-btn,
 .contact {
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 600;
   font-size: 1.43241vh; /* 16px */
   line-height: 1.31875;
@@ -142,11 +142,11 @@ body {
 .nav-btn::before {
   background-image: linear-gradient(
     100deg,
-    #eaff00,
-    #faff8f,
-    #eaff00,
-    #d8f200,
-    #eaff00
+    var(--accent),
+    var(--accent-light),
+    var(--accent),
+    var(--accent-deep),
+    var(--accent)
   );
 }
 
@@ -154,9 +154,9 @@ body {
   background-image: linear-gradient(
     100deg,
     #000000,
-    #2c2c2c,
+    var(--ink-2),
     #000000,
-    #1a1a1a,
+    var(--ink-3),
     #000000
   );
 }
@@ -194,7 +194,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 500;
   font-size: 2.86482vh; /* 32px */
   line-height: 1.31875; /* 42.2 / 32 */
@@ -211,14 +211,14 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 114.593vh; /* 1280px */
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--cond);
   font-weight: 900;
   font-size: 12.5336vh; /* 140px */
   line-height: 1.1; /* 154 / 140 */
   letter-spacing: -0.125336vh; /* -1.4px */
   text-transform: uppercase;
   text-align: center;
-  color: #eaff00;
+  color: var(--accent);
 }
 
 /* ---------- Подзаголовок + живая строка (опущен ниже) ---------- */
@@ -230,7 +230,7 @@ body {
   width: 62vh;
   text-align: center;
   color: #ffffff;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 500;
   font-size: 1.43241vh; /* 16px */
   line-height: 1.55;
@@ -240,7 +240,7 @@ body {
 }
 
 .intro .accent {
-  color: #eaff00;
+  color: var(--accent);
   font-weight: 600;
 }
 
@@ -257,7 +257,7 @@ body {
 }
 
 .ticker .tick {
-  color: #eaff00;
+  color: var(--accent);
   transition: opacity 0.35s ease;
 }
 
@@ -291,7 +291,7 @@ body {
 }
 .case-slide__title {
   margin: 0;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--cond);
   font-weight: 900;
   font-size: 5vw;
   line-height: 0.92;
@@ -302,7 +302,7 @@ body {
 .case-slide__desc {
   margin: 1.3vw 0 0;
   max-width: 34em;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 500;
   font-size: 0.92vw;
   line-height: 1.6;
@@ -335,7 +335,7 @@ body {
   margin-bottom: 1.1vw;
 }
 .case-tag {
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 600;
   font-size: 0.81vw; /* ~14px */
   text-transform: uppercase;
@@ -349,13 +349,13 @@ body {
 }
 .case-tag--accent {
   color: #000000;
-  background: #eaff00;
-  border-color: #eaff00;
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .case-name {
   margin: 0;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--cond);
   font-weight: 900;
   font-size: 4.6296vw; /* 80px */
   line-height: 1.1725;
@@ -367,7 +367,7 @@ body {
 .case-desc {
   margin: 0.9259vw 0 0; /* 16px */
   max-width: 36.4005vw; /* 629px */
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 500;
   font-size: 0.9259vw; /* 16px */
   line-height: 1.31875;
@@ -391,7 +391,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 600;
   font-size: 0.9259vw; /* 16px */
   line-height: 1.31875;
@@ -434,11 +434,11 @@ body {
   background-size: 220% 100%;
   background-image: linear-gradient(
     100deg,
-    #eaff00,
-    #faff8f,
-    #eaff00,
-    #d8f200,
-    #eaff00
+    var(--accent),
+    var(--accent-light),
+    var(--accent),
+    var(--accent-deep),
+    var(--accent)
   );
   transition: opacity 0.45s ease;
   pointer-events: none;
@@ -466,7 +466,7 @@ body {
 
 .section-title {
   margin: 0 0 3vw;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--cond);
   font-weight: 900;
   font-size: 4.5vw;
   line-height: 1.05;
@@ -478,14 +478,14 @@ body {
 .about-lead {
   margin: 0 0 4vw;
   max-width: 48vw;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 500;
   font-size: 1.5vw;
   line-height: 1.5;
   letter-spacing: -0.015vw;
   text-transform: uppercase;
 }
-.about-lead .accent { color: #eaff00; }
+.about-lead .accent { color: var(--accent); }
 
 .stats {
   display: flex;
@@ -497,14 +497,14 @@ body {
 }
 .stat { display: flex; flex-direction: column; gap: 0.4vw; }
 .stat-num {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--cond);
   font-weight: 900;
   font-size: 4vw;
   line-height: 1;
-  color: #eaff00;
+  color: var(--accent);
 }
 .stat-cap {
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 500;
   font-size: 0.9259vw;
   letter-spacing: -0.009vw;
@@ -516,7 +516,7 @@ body {
 .appr { flex: 1; }
 .appr-title {
   margin: 0 0 0.8vw;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--cond);
   font-weight: 900;
   font-size: 1.9vw;
   line-height: 1.1;
@@ -524,7 +524,7 @@ body {
 }
 .appr-text {
   margin: 0;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 500;
   font-size: 0.9259vw;
   line-height: 1.5;
@@ -546,14 +546,14 @@ body {
 .xp-row:last-child { border-bottom: 1px solid var(--line); }
 .xp-main { display: flex; flex-direction: column; gap: 0.55vw; min-width: 0; }
 .xp-co {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--cond);
   font-weight: 900;
   font-size: 2.2vw;
   line-height: 0.95;
   text-transform: uppercase;
 }
 .xp-desc {
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 500;
   font-size: 0.83vw;
   line-height: 1.5;
@@ -563,7 +563,7 @@ body {
   max-width: 34ch;
 }
 .xp-role {
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 500;
   font-size: 0.9259vw;
   letter-spacing: -0.009vw;
@@ -572,7 +572,7 @@ body {
   padding-top: 0.35vw;
 }
 .xp-date {
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 600;
   font-size: 0.9259vw;
   letter-spacing: -0.009vw;
@@ -583,7 +583,7 @@ body {
 
 /* ---------- Поддержка и развитие дизайна (тёмная секция) ---------- */
 .support-lead {
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-size: 0.95vw;
   line-height: 1.6;
   text-transform: uppercase;
@@ -602,7 +602,7 @@ body {
 }
 .support-item:last-child { border-bottom: 1px solid var(--line); }
 .support-name {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--cond);
   font-weight: 900;
   font-size: 1.8vw;
   line-height: 1;
@@ -610,7 +610,7 @@ body {
   letter-spacing: -0.01em;
 }
 .support-desc {
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 500;
   font-size: 0.9vw;
   line-height: 1.5;
@@ -631,7 +631,7 @@ body {
 }
 .edu-item:last-child { border-bottom: 1px solid var(--line); }
 .edu-title {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--cond);
   font-weight: 900;
   font-size: 1.6vw;
   line-height: 1.05;
@@ -639,7 +639,7 @@ body {
   max-width: 42em;
 }
 .edu-date {
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 600;
   font-size: 0.9vw;
   text-transform: uppercase;
@@ -655,7 +655,7 @@ body {
   justify-content: space-between;
   gap: 1vw;
   padding: 1.4vw 0;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--cond);
   font-weight: 900;
   font-size: 1.8vw;
   text-transform: uppercase;
@@ -664,7 +664,7 @@ body {
 .meta-summary::-webkit-details-marker { display: none; }
 .meta-summary::after {
   content: "+";
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 600;
   font-size: 1.6vw;
   color: var(--dim);
@@ -672,7 +672,7 @@ body {
 .meta-toggle[open] .meta-summary::after { content: "–"; }
 .meta-body {
   white-space: pre-line;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 500;
   font-size: 0.9vw;
   line-height: 1.7;
@@ -684,7 +684,7 @@ body {
 
 .stack { display: flex; align-items: baseline; gap: 1.5vw; flex-wrap: wrap; }
 .stack-label {
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 600;
   font-size: 0.9259vw;
   text-transform: uppercase;
@@ -693,7 +693,7 @@ body {
 }
 .stack-tags { display: flex; flex-wrap: wrap; gap: 0.6vw; }
 .tag {
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 500;
   font-size: 0.9259vw;
   letter-spacing: -0.009vw;
@@ -703,7 +703,7 @@ body {
   border-radius: 0.463vw;
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
-.tag:hover { background: #eaff00; border-color: #eaff00; }
+.tag:hover { background: var(--accent); border-color: var(--accent); }
 
 /* ---------- Контакты ---------- */
 .contacts-inner { display: flex; flex-direction: column; align-items: center; text-align: center; }
@@ -712,7 +712,7 @@ body {
   align-items: center;
   gap: 0.6vw;
   margin: 0 0 2vw;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 500;
   font-size: 0.9259vw;
   letter-spacing: -0.009vw;
@@ -723,12 +723,12 @@ body {
   width: 0.6vw;
   height: 0.6vw;
   border-radius: 50%;
-  background: #3ee07a;
-  box-shadow: 0 0 0.9vw #3ee07a;
+  background: var(--status);
+  box-shadow: 0 0 0.9vw var(--status);
 }
 .contacts-title {
   margin: 0 0 1.2vw;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--cond);
   font-weight: 900;
   font-size: 6vw;
   line-height: 1;
@@ -737,7 +737,7 @@ body {
 }
 .contacts-sub {
   margin: 0 0 3vw;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 500;
   font-size: 1vw;
   letter-spacing: -0.01vw;
@@ -746,7 +746,7 @@ body {
 }
 .contacts-links { display: flex; gap: 2.5vw; margin-bottom: 3vw; }
 .contact-link {
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--mono);
   font-weight: 600;
   font-size: 1vw;
   letter-spacing: -0.01vw;
@@ -757,7 +757,7 @@ body {
   padding-bottom: 0.2vw;
   transition: color 0.3s ease, border-color 0.3s ease;
 }
-.contact-link:hover { color: #eaff00; border-color: #eaff00; }
+.contact-link:hover { color: var(--accent); border-color: var(--accent); }
 
 /* ============================================================
    МОБИЛЬНАЯ АДАПТАЦИЯ (телефоны + планшеты в портрете)
@@ -912,7 +912,7 @@ body {
 
   /* Контакты */
   .contacts-status { font-size: 12px; gap: 8px; margin-bottom: 16px; }
-  .dot { width: 8px; height: 8px; box-shadow: 0 0 10px #3ee07a; }
+  .dot { width: 8px; height: 8px; box-shadow: 0 0 10px var(--status); }
   .contacts-title { font-size: 14vw; margin-bottom: 14px; letter-spacing: -0.5px; }
   .contacts-sub { font-size: 13px; margin-bottom: 26px; }
   .contacts-links { gap: 20px; margin-bottom: 26px; flex-wrap: wrap; justify-content: center; }

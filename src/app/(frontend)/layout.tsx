@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 
+import '@/styles/tokens.css'
 import '@/styles/home.css'
 import '@/styles/contact-widget.css'
 import '@/styles/transition.css'
